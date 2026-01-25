@@ -1,0 +1,9 @@
+<div class="pagination">
+{% for i in page.paginator.page_range %}
+    {% if page.number == i %}
+        <a href="#">{{ i }}</a>
+    {% else %}
+        <a href="?page={{ i }}">{{ i }}</a>
+    {% endif %}
+{% endfor %}
+</div>
